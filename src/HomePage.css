@@ -1,0 +1,25 @@
+.aply{
+  position: fixed;
+  z-index: 5;
+  background: #fff;
+  right: 0;
+  bottom: 100px;
+  width: 50px;
+  height: 80px;
+}
+.header{
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.ant-row{
+  max-width: 100%;
+}
+.body{
+  overflow-x: hidden;
+}
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
