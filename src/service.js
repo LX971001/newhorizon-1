@@ -15,5 +15,10 @@ const queryQuestion = () => axios.get('/v1/questions')
 const queryLessons = () => axios.get('/v1/lessons')
   .then(response => response.data)
   .catch(error => console.log(error));
+
+//获取一级栏目下的二级栏目
+const querySencondNavs = (params) => axios.get('/v1/SecondNavs',{params:params})
+  .then(response => response.data)
+  .catch(error => console.log(error));
   
 export { creatQuestion, queryQuestion, queryLessons, login };

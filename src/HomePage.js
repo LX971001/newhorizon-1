@@ -53,6 +53,7 @@ class HomePage extends React.Component {
             {this.state.loginstatus?<Link to='/admin'>管理后台</Link>:<Link to='/login'>登录</Link>}
             {console.log(this.state.loginstatus)}
             </Menu.Item>
+            <Menu.Item key="5"><Link to='/NewsCenter'>测试</Link></Menu.Item>
           </Menu>
         </Header>
         <Content stylel={{width:"100%"}}>
