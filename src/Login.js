@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Icon, Input, Button, Checkbox} from 'antd';
+import { Link } from 'react-router-dom';
 import './Login.css';
 import { login } from './service';
 
@@ -10,23 +11,29 @@ class LoginForm extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err,values) => {
       if(!err){
-        //连接登录接口
+        login(values).then(res => {
+          var response = res.message;
+          if (response === "login success") {
+            this.props.history.push('/home');
+          }
+        })
       }
     });
   }
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
+      <div className="bg">
       <Form onSubmit={this.handleSubmit} className="login-form">
         <FormItem>
-          {getFieldDecorator('userName', {
+          {getFieldDecorator('username', {
             rules: [{ required:true, message:'请输入用户名！'}],
           })(
             <Input prefix={<Icon type="user" style={{ color:'rgba(0,0,0,.25)'}}/>} placeholder="用户名"/>
           )}
         </FormItem>
         <FormItem>
-          {getFieldDecorator('password', {
+          {getFieldDecorator('passwords', {
             rules: [{ required:true, message:'请输入密码！'}],
           })(
             <Input prefix={<Icon type="lock" style={{ color:'rgba(0,0,0,.25)'}}/>} type="password" placeholder="密码"/>
@@ -41,8 +48,10 @@ class LoginForm extends React.Component {
           )}
           <a className='login-form-forgot' href="">忘记密码</a>
           <Button type="primary" htmlType="submit" className="login-form-button">登录</Button>
+        <Link to='/regist'><a className='login-form-regist' href="">注册新账户</a></Link>
         </FormItem>
       </Form>
+      </div>
     );
   }
 }

@@ -2,7 +2,7 @@
   "name": "myweb",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://116.196.116.213:10000",
+  "proxy": "http://47.106.72.161:10000",
   "dependencies": {
     "antd": "^3.3.0",
     "autoprefixer": "7.1.6",
@@ -42,7 +42,6 @@
     "raf": "3.4.0",
     "react": "^16.2.0",
     "react-app-rewire-less": "^2.1.1",
-    "react-app-rewired": "^1.5.0",
     "react-dev-utils": "^5.0.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -111,5 +110,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "react-app-rewired": "^1.5.2"
   }
 }

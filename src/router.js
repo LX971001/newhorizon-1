@@ -5,6 +5,7 @@ import HomePage from './HomePage'
 import Question from './Question'
 import ShowQuestion from './ShowQuestion'
 import Login from './Login'
+import Register from './Register'
 
 class Root extends Component {
   render() {
@@ -15,7 +16,8 @@ class Root extends Component {
           <Route path='/home' component={HomePage}/>
           <Route path='/questions' component={Question}/>
           <Route path='/showquestions' component={ShowQuestion}/>
-        <Route path='/login' component={Login}/>
+          <Route path='/login' component={Login}/>
+          <Route path='/regist' component={Register}/>
           <Redirect from='/' to='/home'></Redirect>
         </Switch>
       </Router>
