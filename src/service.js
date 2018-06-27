@@ -22,4 +22,9 @@ const queryLessons = () => axios.get('/v1/lessons')
   .then(response => response.data)
   .catch(error => console.log(error));
 
-export { creatQuestion, queryQuestion, queryLessons, login, regist };
+
+  const Aboutus = () => axios.get('/v1/aboutus')
+  .then(response => response.data)
+  .catch(error => console.log(error));
+
+export { creatQuestion, queryQuestion, queryLessons, login, regist ,Aboutus};
