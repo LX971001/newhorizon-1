@@ -38,8 +38,7 @@ class NewsContent extends React.Component {
                 <Content >
                     <Carousel autoplay > {
                         this.state.imgs.map(function (item) {
-                            return <Link to={item.nid} > < img src={item.nImgUrl}
-                            /> </Link >;
+                            return <Link to={item.nid} > < img src={item.nImgUrl}/> </Link >;
                         })
                     }
 
