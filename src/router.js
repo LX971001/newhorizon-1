@@ -8,6 +8,7 @@ import Login from './Login'
 import Register from './Register'
 import {BasedNewsCenter}   from './NewsCenter/index'
 import {ShoppingCart} from './ShoppingCart/shoppingcart'
+import about from './About/About'
 class Root extends Component {
   render() {
     return (
@@ -21,6 +22,7 @@ class Root extends Component {
           <Route path='/regist' component={Register}/>
           <Route path="/NewsCenter" component={BasedNewsCenter}/>
           <Route path="/ShoppingCart" component={ShoppingCart}/>
+          <Route path='/About' component={about}/>
           <Redirect from='/' to='/home'></Redirect>
         </Switch>
       </Router>
